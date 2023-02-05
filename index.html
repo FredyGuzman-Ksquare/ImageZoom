@@ -9,13 +9,13 @@
 </head>
 <body>
 
-        <canvas id="mycanvas" style="width: 50%; height: 50%"></canvas>
+        <canvas id="mycanvas" class="img-fluid.rdsitemzoom" style="width: 50%; height: 50%"></canvas>
    
 
     <script src="script.js"></script>
     <script>
         var gesturableImg = new ImgTouchCanvas({
-            canvas: document.getElementById('mycanvas'),
+            canvas: document.getElementsByClassName('.img-fluid.rdsitemzoom'),
             path: "/imgs/imagen.jpg"
         });
     </script>
