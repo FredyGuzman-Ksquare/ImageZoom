@@ -6,17 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style.css" rel="stylesheet" type="text/css">
     <title>Markup IV</title>
+    <script src="/openseadragon/openseadragon.min.js"></script>
 </head>
 <body>
 
-        <canvas id="mycanvas" class="img-fluid.rdsitemzoom" style="width: 50%; height: 50%"></canvas>
-   
-
-    <script src="script.js"></script>
-    <script>
-        var gesturableImg = new ImgTouchCanvas({
-            canvas: document.getElementsByClassName('.img-fluid.rdsitemzoom'),
-            path: "/imgs/imagen.jpg"
+    <div id="openseadragon1" style="width: 800px; height: 600px;"></div>
+    <script type="text/javascript">
+        var viewer = OpenSeadragon({
+            id: "openseadragon1",
+            prefixUrl: "/openseadragon/images/",
+            tileSources: "imgs/imagen.jpg"
         });
     </script>
 </body>
