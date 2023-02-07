@@ -20,7 +20,9 @@
         <img src="/ImageZoom/imgs/cosmocon.jpg">
 </div>
     <script>
-    $(".container").beepPanZoom();
+    $(".container").beepPanZoom({ZOOM:1/2,
+MIN_SCALE:0,
+MAX_SCALE:5});
     </script>
     <!-- <script type="text/javascript">
         var viewer = OpenSeadragon({
