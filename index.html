@@ -24,7 +24,7 @@
 </div>
     <script>
         let el = document.querySelector('#image');
-    let pz = new PinchZoom.default(el, {zoomOutFactor:1,draggableUnzoomed:false,minZoom: 1,setOffsetsOnce:true});
+    let pz = new PinchZoom.default(el, {zoomOutFactor:1,draggableUnzoomed:false,minZoom: 1,setOffsetsOnce:true,lockDragAxis:true});
     $(".container").beepPanZoom({ZOOM:1/2,
 MIN_SCALE:0.1,
 MAX_SCALE:1.1});
