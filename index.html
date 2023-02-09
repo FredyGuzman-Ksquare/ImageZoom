@@ -12,7 +12,7 @@
 </head>
 <body>
 
-    <img src="/imgs/imagen.jpg">
+    <img id="image"src="/ImageZoom/imgs/imagen.jpg">
     <div class="container" style="overflow: hidden;width:inherit;height:inherit,">
               <img src="/ImageZoom/imgs/imagen.jpg">
     </div>
@@ -20,6 +20,8 @@
         <img src="/ImageZoom/imgs/cosmocon.jpg">
 </div>
     <script>
+        let el = document.querySelector('#image');
+    let pz = new PinchZoom(el, {zoomOutFactor:1,draggableUnzoomed:false,minZoom: 1,});
     $(".container").beepPanZoom({ZOOM:1/2,
 MIN_SCALE:0.1,
 MAX_SCALE:1.1});
