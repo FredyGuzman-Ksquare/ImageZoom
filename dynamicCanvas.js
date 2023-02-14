@@ -60,6 +60,7 @@ function get_imgName(imgSrc) {
     let str = get_imgSrcFormatted(imgSrc);
     str = str.replace('/imgs/','');
     str = str.replace('.jpg','');
+    str = str.replace('ImageZoom','')
     return str;
 }
 /* function createCanvas(img) {
