@@ -14,7 +14,7 @@
 function createCanvas(img) {
     if(img.classList.contains('touchZoom')){
         let imgName = get_imgName(img.src);
-        var body = document.getElementsByTagName("body")[0];
+        let body = document.getElementsByTagName("body")[0];
         let div = document.createElement('div');
         div.id=imgName+"_div";
         body.appendChild(div);
@@ -58,13 +58,13 @@ function get_imgSrcFormatted(imgSrc) {
 }
 function get_imgName(imgSrc) {
     let str = get_imgSrcFormatted(imgSrc);
-    print("get_imgSrcFormatted: " + str);
+    console.log("get_imgSrcFormatted: " + str);
     str = str.replace('/imgs/','');
-    print("/imgs/: " + str);
+    console.log("/imgs/: " + str);
     str = str.replace('.jpg','');
-    print(".jpg: " + str);
+    console.log(".jpg: " + str);
     str = str.replace('ImageZoom','')
-    print("ImageZoom: " + str);
+    console.log("ImageZoom: " + str);
     return str;
 }
 /* function createCanvas(img) {

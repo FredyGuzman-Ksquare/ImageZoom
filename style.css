@@ -15,7 +15,9 @@ body{
     body {
         background-color:red; 
     }
-    
+    canvas{
+        display:none;
+    }
 }
 
 /* if device has no touch screen */
@@ -27,4 +29,5 @@ body{
         .touchZoom{
             display:none;
         }
+        
     }
