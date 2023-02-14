@@ -9,25 +9,33 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.js"></script>
     <script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="beepPanZoom.js"></script>
+    <script src="dynamicCanvas.js"></script>
     <script type="module" src="pinch-zoom-js\dist\pinch-zoom.min.js"></script>
     <script src="pinch-zoom-js\dist\pinch-zoom.umd.js"></script>
+    <script src="script.js"></script>
 
 </head>
 <body>
+    <div> <!-- set desired position and size to that div -->
+        <canvas id="mycanvas" style="width: 100%; height: 100%"></canvas>
+    </div>
 
     <img id="image"src="/ImageZoom/imgs/imagen.jpg">
     <div class="container" style="overflow: hidden;width:inherit;height:inherit,">
-              <img src="/ImageZoom/imgs/imagen.jpg">
+              <img src="/imgs/imagen.jpg" class="touchZoom">
     </div>
     <div class="container" style="width:inherit;height:inherit">
-        <img src="/ImageZoom/imgs/cosmocon.jpg">
+        <img src="imgs/cosmocon.jpg" >
 </div>
     <script>
-        let el = document.querySelector('#image');
+       /*  let el = document.querySelector('#image');
     let pz = new PinchZoom.default(el, {zoomOutFactor:1,draggableUnzoomed:false,minZoom: 1,setOffsetsOnce:true,lockDragAxis:true});
     $(".container").beepPanZoom({ZOOM:1/2,
 MIN_SCALE:0.1,
-MAX_SCALE:1.1});
+MAX_SCALE:1.1}); */
+    var gesturableImg = new ImgTouchCanvas({
+        canvas: document.getElementById('mycanvas'),
+        path: '/imgs/imagen.jpg'});
     </script>
     <!-- <script type="text/javascript">
         var viewer = OpenSeadragon({
@@ -36,5 +44,9 @@ MAX_SCALE:1.1});
             tileSources: "/imgs/imagen.jpg"
         });
     </script> -->
+    <button id="butt" class="create"
+        type="button" onclick="img_find()">
+    Create canvas
+</button>
 </body>
 </html>

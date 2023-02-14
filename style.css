@@ -2,3 +2,29 @@ body{
     height: 100%;
     width: 100%;
 }
+/* @media screen and (max-width: 700px) {
+    body {
+        background-color: green;
+        color: white;
+        padding: 15px;
+    }
+} */
+
+@media (any-pointer: coarse) {
+    /* do your own styles */
+    body {
+        background-color:red; 
+    }
+    
+}
+
+/* if device has no touch screen */
+    @media (any-pointer: fine) {
+        /* do your own styles */
+        body {
+            background-color:green; 
+        }
+        .touchZoom{
+            display:none;
+        }
+    }
