@@ -12,7 +12,8 @@
     createCanvas()  
     };   */
 function createCanvas(img) {
-    if(img.classList.contains('touchZoom')){
+    var isTouchScreen = 'ontouchstart' in window || navigator.msMaxTouchPoints;
+    if(img.classList.contains('touchZoom')&&isTouchScreen === true){
         let imgName = get_imgName(img.src);
         let body = document.getElementsByTagName("body")[0];
         let div = document.createElement('div');
@@ -63,7 +64,7 @@ function get_imgName(imgSrc) {
     console.log("/imgs/: " + str);
     str = str.replace('.jpg','');
     console.log(".jpg: " + str);
-    str = str.replace('ImageZoom','')
+    str = str.replace('ImageZoom','');
     console.log("ImageZoom: " + str);
     return str;
 }
