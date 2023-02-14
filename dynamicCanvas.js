@@ -13,7 +13,7 @@
     };   */
 function createCanvas(img) {
     if(img.classList.contains('touchZoom')){
-        let imgName = get_imgName(img.src)
+        let imgName = get_imgName(img.src);
         var body = document.getElementsByTagName("body")[0];
         let div = document.createElement('div');
         div.id=imgName+"_div";
@@ -53,7 +53,7 @@ function img_find() {
 }
 
 function get_imgSrcFormatted(imgSrc) {
-    str = imgSrc.replace('https://fredyguzman-ksquare.github.io/','');
+    str = imgSrc.replace('https://fredyguzman-ksquare.github.io/ImageZoom','');
     return str;
 }
 function get_imgName(imgSrc) {
