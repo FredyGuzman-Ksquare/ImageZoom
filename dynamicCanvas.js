@@ -53,7 +53,7 @@ function img_find() {
 }
 
 function get_imgSrcFormatted(imgSrc) {
-    str = imgSrc.replace('https://fredyguzman-ksquare.github.io/');
+    str = imgSrc.replace('https://fredyguzman-ksquare.github.io/','');
     return str;
 }
 function get_imgName(imgSrc) {
