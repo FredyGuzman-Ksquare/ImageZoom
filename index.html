@@ -22,10 +22,10 @@
 
     <img id="image"src="/ImageZoom/imgs/imagen.jpg">
     <div class="container" style="overflow: hidden;width:inherit;height:inherit,">
-              <img src="/imgs/imagen.jpg" class="touchZoom">
+              <img src="/ImageZoom/imgs/imagen.jpg" class="touchZoom">
     </div>
     <div class="container" style="width:inherit;height:inherit">
-        <img src="imgs/cosmocon.jpg" >
+        <img src="/ImageZoom/imgs/cosmocon.jpg" >
 </div>
     <script>
        /*  let el = document.querySelector('#image');
@@ -35,7 +35,7 @@ MIN_SCALE:0.1,
 MAX_SCALE:1.1}); */
     var gesturableImg = new ImgTouchCanvas({
         canvas: document.getElementById('mycanvas'),
-        path: '/imgs/imagen.jpg'});
+        path: '/ImageZoom/imgs/imagen.jpg'});
     </script>
     <!-- <script type="text/javascript">
         var viewer = OpenSeadragon({
