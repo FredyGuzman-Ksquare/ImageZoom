@@ -28,7 +28,7 @@ function createCanvas(img) {
         div.appendChild(canvas);
         var gesturableImg = new ImgTouchCanvas({
             canvas: document.getElementById(canvas.id),
-            path: get_imgSrcFormatted(img.src)});
+            path: img.src});
     }
     
    /*  body.appendChild(canvas);   */
