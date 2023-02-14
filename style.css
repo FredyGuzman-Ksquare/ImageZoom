@@ -15,7 +15,8 @@ body{
     body {
         background-color:red; 
     }
-    canvas{
+    
+    .touchZoom{
         display:none;
     }
 }
@@ -26,7 +27,7 @@ body{
         body {
             background-color:green; 
         }
-        .touchZoom{
+        canvas{
             display:none;
         }
         
