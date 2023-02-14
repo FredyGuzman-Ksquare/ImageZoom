@@ -58,9 +58,13 @@ function get_imgSrcFormatted(imgSrc) {
 }
 function get_imgName(imgSrc) {
     let str = get_imgSrcFormatted(imgSrc);
+    print("get_imgSrcFormatted: " + str);
     str = str.replace('/imgs/','');
+    print("/imgs/: " + str);
     str = str.replace('.jpg','');
+    print(".jpg: " + str);
     str = str.replace('ImageZoom','')
+    print("ImageZoom: " + str);
     return str;
 }
 /* function createCanvas(img) {
