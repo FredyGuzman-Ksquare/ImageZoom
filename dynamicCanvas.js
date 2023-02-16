@@ -21,7 +21,7 @@ function createCanvas(img) {
         let body = document.getElementsByTagName("body")[0];
         let div = document.createElement('div');
         div.id=imgName+"_div";
-        body.appendChild(div);
+        //body.appendChild(div);
         console.log("CANVAS CREATED");
         var canvas = document.createElement('canvas');
         canvas.id = imgName;
