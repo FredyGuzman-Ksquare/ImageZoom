@@ -14,6 +14,7 @@
 function createCanvas(img) {
     var isTouchScreen = 'ontouchstart' in window || navigator.msMaxTouchPoints;
     if(img.classList.contains('touchZoom')&&isTouchScreen === true){
+        let zoomImage = document.querySelector(img.id);
         let imgName = get_imgName(img.src);
         let body = document.getElementsByTagName("body")[0];
         let div = document.createElement('div');
@@ -27,6 +28,7 @@ function createCanvas(img) {
         canvas.style.zIndex = 8;
         canvas.style.position = "absolute";
         div.appendChild(canvas);
+        zoomImage.insertAdjacentElement('afterend', div)
         var gesturableImg = new ImgTouchCanvas({
             canvas: document.getElementById(canvas.id),
             path: img.src});
