@@ -18,7 +18,9 @@ function createCanvas(img) {
         console.log("img id: " +img.id);
         //let zoomImage = img.id;
         let imgName = get_imgName(img.src);
-        let body = document.getElementsByTagName("body")[0];
+        let body = document.body;
+        var index = Array.prototype.indexOf.call(body.childNodes, element);
+        console.log("The position of the element is: " + index)
         let div = document.createElement('div');
         div.id=imgName+"_div";
         //body.appendChild(div);
