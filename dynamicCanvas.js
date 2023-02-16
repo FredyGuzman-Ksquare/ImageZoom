@@ -19,7 +19,7 @@ function createCanvas(img) {
         //let zoomImage = img.id;
         let imgName = get_imgName(img.src);
         let body = document.body;
-        var index = Array.prototype.indexOf.call(body.childNodes, element);
+        var index = Array.prototype.indexOf.call(body.childNodes, img);
         console.log("The position of the element is: " + index)
         let div = document.createElement('div');
         div.id=imgName+"_div";
