@@ -14,7 +14,9 @@
 function createCanvas(img) {
     var isTouchScreen = 'ontouchstart' in window || navigator.msMaxTouchPoints;
     if(img.classList.contains('touchZoom')&&isTouchScreen === true){
-        let zoomImage = document.querySelector(img.id);
+        img.id=get_imgName(img.src)+"_id";
+        console.log("img id: " +img.id);
+        //let zoomImage = img.id;
         let imgName = get_imgName(img.src);
         let body = document.getElementsByTagName("body")[0];
         let div = document.createElement('div');
@@ -28,7 +30,7 @@ function createCanvas(img) {
         canvas.style.zIndex = 8;
         canvas.style.position = "absolute";
         div.appendChild(canvas);
-        zoomImage.insertAdjacentElement('afterend', div)
+        div.insertAdjacentElement('afterend', img);
         var gesturableImg = new ImgTouchCanvas({
             canvas: document.getElementById(canvas.id),
             path: img.src});
@@ -38,7 +40,7 @@ function createCanvas(img) {
 }
 
 function img_find() {
-    var imgs = document.getElementsByTagName("img");
+    var imgs = document.querySelectorAll("img.touchZoom");
     var imgSrcs = [];
 
     for (var i = 0; i < imgs.length; i++) {
