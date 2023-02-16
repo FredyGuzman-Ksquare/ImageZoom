@@ -27,8 +27,6 @@ function createCanvas(img) {
         canvas.id = imgName;
         canvas.width = img.width;
         canvas.height = img.height;
-        canvas.style.zIndex = 8;
-        canvas.style.position = "absolute";
         div.appendChild(canvas);
         div.insertAdjacentElement('afterend', img);
         var gesturableImg = new ImgTouchCanvas({
